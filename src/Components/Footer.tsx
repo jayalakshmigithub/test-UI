@@ -11,7 +11,7 @@ import { Facebook, Instagram, Twitter, LinkedIn } from '@mui/icons-material';
 
 const Footer: React.FC = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+//   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <Box

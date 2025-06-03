@@ -24,7 +24,7 @@ const services = [
 const GameCategories:React.FC = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const isTablet = useMediaQuery(theme.breakpoints.down('md'));
+  // const isTablet = useMediaQuery(theme.breakpoints.down('md'));
   return (
 //  <Box
 //   sx={{
