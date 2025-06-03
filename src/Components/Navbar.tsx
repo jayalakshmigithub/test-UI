@@ -26,25 +26,41 @@ const Navbar: React.FC = () => {
   const toggleDrawer = (open: boolean) => () => {
     setDrawerOpen(open);
   };
+
   const drawerList = (
-    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
-      <List sx={{ fontFamily: "Poppins" }}>
-        {navLinks.map((text) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemText
-                primary={text}
-                primaryTypographyProps={{
-                  fontFamily: "Poppins",
-                  fontSize: "16px",
-                }}
-              />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
+  <Box
+    sx={{
+      width: 250,
+      height: '100%',
+      background: 'rgba(0, 0, 0, 0.4)', 
+      backdropFilter: 'blur(12px)',
+      WebkitBackdropFilter: 'blur(12px)',
+      borderLeft: '1px solid rgba(255, 255, 255, 0.18)',
+      color: '#fff',
+      fontFamily: 'Poppins',
+    }}
+    role="presentation"
+    onClick={toggleDrawer(false)}
+  >
+    <List>
+      {navLinks.map((text) => (
+        <ListItem key={text} disablePadding>
+          <ListItemButton>
+            <ListItemText
+              primary={text}
+              primaryTypographyProps={{
+                fontFamily: 'Poppins',
+                fontSize: '16px',
+                color: '#fff',
+              }}
+            />
+          </ListItemButton>
+        </ListItem>
+      ))}
+    </List>
+  </Box>
+);
+
   return (
     <AppBar
       position="static"
@@ -146,13 +162,21 @@ const Navbar: React.FC = () => {
             >
               <MenuIcon />
             </IconButton>
+           
             <Drawer
-              anchor="right"
-              open={drawerOpen}
-              onClose={toggleDrawer(false)}
-            >
-              {drawerList}
-            </Drawer>
+  anchor="right"
+  open={drawerOpen}
+  onClose={toggleDrawer(false)}
+  PaperProps={{
+    sx: {
+      backgroundColor: 'transparent',
+      boxShadow: 'none',
+    },
+  }}
+>
+  {drawerList}
+</Drawer>
+
           </>
         )}
       </Toolbar>

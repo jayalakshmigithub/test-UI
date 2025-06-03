@@ -24,39 +24,8 @@ const services = [
 const GameCategories:React.FC = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  // const isTablet = useMediaQuery(theme.breakpoints.down('md'));
   return (
-//  <Box
-//   sx={{
-//     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.75)), url(${background})`,
-//     backgroundSize: 'cover',
-//     backgroundPosition: 'center',
-//     backgroundRepeat: 'no-repeat',
-//     minHeight: '100vh',
-//   }}
-// >
-//     <Typography variant='h4' sx={{fontFamily:'Poppins',color:'white', display:'flex',justifyContent:'center', lineHeight: 1.8,textAlign:'center'}}>
-//     Lorem Ipsum is simply dummy text of the <br/>printing and typesetting industry.</Typography>
-//      <p style={{color:'white',display:'flex',justifyContent:'center',textAlign:'center'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-//      Lorem Ipsum has been the <br/>industry's standard dummy text ever since the 1500s</p>
-// arVr.png
 
-// import ARsolutions from '../assets/arsolutions.png'
-// import modeling from '../assets/'     <Box
-//           component="img"
-//           src={mobilegame}
-//           alt="controller"
-//           sx={{
-//             width: isMobile ? '60px' : '60px',
-//             height: isMobile ? '60px' : '60px',
-//             pointerEvents: 'none',
-//             zIndex: 2,
-//             borderRadius:'8px'
-         
-//           }}
-         
-//         />
-// </Box>
 
 <Box
   sx={{

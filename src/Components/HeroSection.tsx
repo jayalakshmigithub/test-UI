@@ -1,410 +1,62 @@
 import React from 'react'
 import {Box,Typography,Button,useTheme,useMediaQuery,} from "@mui/material";
 import controllerImg from '../assets/joy_stick 1.png'
-import unityLogo from '../assets/unity-game-logo.png'
-import cryengineLogo from '../assets/cryengine-logo.png'
-import unrealLogo from '../assets/unreal-logo1.png'
-
-// const HeroSection:React.FC = () => {
-// return (
-//     <Box
-//       sx={{
-//         backgroundColor: 'black',
-//         fontFamily: 'Poppins',
-//         padding: '80px 40px',
-//         minHeight: 'auto',
-//         display: 'flex',
-//         alignItems: 'center',
-//         textAlign:'start'
-
-//       }}
-//     >
-//       <Box sx={{ maxWidth: '500px' , marginLeft:'5%'}}>
-//         <Typography variant="h6" sx={{ color: 'orange', marginBottom: '10px',fontFamily:'Poppins' ,fontWeight:'600'}}>
-//           3D game Dev
-//         </Typography>
-//         <Typography
-//           variant="h2"
-//           sx={{ color: 'white', marginBottom: '20px', lineHeight: 1.2 ,fontFamily:'Poppins',fontWeight:'600'}}
-//         >
-//           work that we 
-//           <br/>
-//           produce for our
-//           <br/>
-//            clients
-//         </Typography>
-//         <Typography
-//           sx={{ color: 'white', marginBottom: '30px', fontSize: '16px' ,fontFamily:'Poppins'}}
-//         >
-//           Lorem Ipsum is simply dummy text of the printing and
-//           <br/>
-//            typesetting industry.
-//           Lorem Ipsum has been the industry's 
-//           <br/>
-//           standard
-//         </Typography>
-//         <Button variant="contained" sx={{ backgroundColor: 'orange',marginTop:'15px',padding:'14px',fontFamily:'Poppins' ,borderRadius:'25px',border:'none',fontSize:'12px',fontWeight:600}}>
-//           Get more details
-//         </Button>
-//       </Box>
-//     </Box>
-//   );
-// }
-
-
-
-// const HeroSection: React.FC = () => {
-//   const theme = useTheme();
-//   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-
-//   return (
-//     <Box
-//       sx={{
-//         backgroundColor: 'black',
-//         fontFamily: 'Poppins',
-//         padding: isMobile ? '50px 20px' : '80px 60px',
-//         display: 'flex',
-//         alignItems: 'center',
-//         justifyContent: 'flex-start', 
-        
-//       }}
-//     >
-//       <Box
-//         sx={{
-//           maxWidth: isMobile ? '100%' : '500px',
-//           textAlign: 'left', 
-//         marginLeft: isMobile ? '0' : '5%',
-//         }}
-//       >
-//         <Typography
-//           variant="h6"
-//           sx={{
-//             color: 'orange',
-//             marginBottom: '10px',
-//             fontWeight: 600,
-//           }}
-//         >
-//           3D game Dev
-//         </Typography>
-
-//         <Typography
-//           variant="h2"
-//           sx={{
-//             color: 'white',
-//             marginBottom: '20px',
-//             lineHeight: 1.2,
-//             fontWeight: 600,
-//             fontSize: isMobile ? '30px' : '60px',
-//           }}
-//         >
-//           Work that we
-//           <br />
-//           produce for our
-//           <br />
-//           clients
-//         </Typography>
-
-//         <Typography
-//           sx={{
-//             color: 'white',
-//             marginBottom: '30px',
-//             fontSize: isMobile ? '14px' : '16px',
-//           }}
-//         >
-//           Lorem Ipsum is simply dummy text of the printing and <br/> 
-//           typesetting industry. Lorem Ipsum has been the industry's <br/>
-//           standard
-//         </Typography>
-
-//        <Button
-//   variant="contained"
-//   sx={{
-//     backgroundColor: 'orange',
-//     padding: isMobile ? '10px 20px' : '12px 26px',
-//     borderRadius: '25px',
-//     fontSize: isMobile ? '12px' : '14px',
-//     fontWeight: 600,
-//     textTransform: 'none',
-//   }}
-// >
-//   Get more details
-// </Button>
-
-//       </Box>
-//     </Box>
-//   );
-// };
-
-// const HeroSection: React.FC = () => {
-//   const theme = useTheme();
-//   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-
-
-//   return (
-//     <Box
-//       sx={{
-//         backgroundColor: 'black',
-//         fontFamily: 'Poppins',
-//         padding: isMobile ? '50px 20px' : '80px 60px',
-//         display: 'flex',
-//         flexDirection: isMobile ? 'column' : 'row',
-//         alignItems: 'center',
-//         justifyContent: 'space-between',
-//         position: 'relative',
-//       }}
-//     >
-//       {/* Left Text Content */}
-//       <Box
-//         sx={{
-//           maxWidth: isMobile ? '100%' : '500px',
-//           textAlign: 'left',
-//           marginLeft: isMobile ? '0' : '5%',
-//         }}
-//       >
-//         <Typography variant="h6" sx={{ color: 'orange', marginBottom: '10px', fontWeight: 600 }}>
-//           3D game Dev
-//         </Typography>
-
-//         <Typography
-//           variant="h2"
-//           sx={{
-//             color: 'white',
-//             marginBottom: '20px',
-//             lineHeight: 1.2,
-//             fontWeight: 600,
-//             fontSize: isMobile ? '30px' : '60px',
-//           }}
-//         >
-//           Work that we
-//           <br />
-//           produce for our
-//           <br />
-//           clients
-//         </Typography>
-
-//         <Typography
-//           sx={{
-//             color: 'white',
-//             marginBottom: '30px',
-//             fontSize: isMobile ? '14px' : '16px',
-//           }}
-//         >
-//           Lorem Ipsum is simply dummy text of the printing and <br />
-//           typesetting industry. Lorem Ipsum has been the industry's <br />
-//           standard
-//         </Typography>
-
-//         <Button
-//           variant="contained"
-//           sx={{
-//             backgroundColor: 'orange',
-//             padding: isMobile ? '10px 20px' : '12px 26px',
-//             borderRadius: '25px',
-//             fontSize: isMobile ? '12px' : '14px',
-//             fontWeight: 600,
-//             textTransform: 'none',
-//           }}
-//         >
-//           Get more details
-//         </Button>
-//       </Box>
-
-//       {/* Controller Image */}
-//       <Box
-//         component="img"
-//         src={controllerImg}
-//         alt="controller"
-//         sx={{
-//           marginTop: isMobile ? '40px' : 0,
-//           position: isMobile ? 'static' : 'absolute',
-//           top: isMobile ? 'auto' : '5px',
-//           right: isMobile ? 'auto' : '13%',
-//           width: isMobile ? '180px' : '350px',
-//           zIndex: 1,
-//           pointerEvents: 'none',
-//         }}
-//       />
-//     </Box>
-//   );
-// };
-
-// const HeroSection: React.FC = () => {
-//   const theme = useTheme();
-//   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-
-//   return (
-//     <Box
-//       sx={{
-//         backgroundColor: 'black',
-//         fontFamily: 'Poppins',
-//         padding: isMobile ? '50px 20px' : '80px 60px',
-//         display: 'flex',
-//         flexDirection: isMobile ? 'column' : 'row',
-//         alignItems: 'center',
-//         justifyContent: 'space-between',
-//         position: 'relative',
-//       }}
-//     >
-//       {/* Text Section */}
-//       <Box
-//         sx={{
-//           maxWidth: isMobile ? '100%' : '500px',
-//           textAlign: 'left',
-//           marginLeft: isMobile ? '0' : '5%',
-//         }}
-//       >
-//         <Typography variant="h6" sx={{ color: 'orange', mb: 2, fontWeight: 600 }}>
-//           3D game Dev
-//         </Typography>
-//         <Typography
-//           variant="h2"
-//           sx={{
-//             color: 'white',
-//             lineHeight: 1.2,
-//             fontWeight: 600,
-//             fontSize: isMobile ? '30px' : '60px',
-//             mb: 2,
-//           }}
-//         >
-//           Work that we
-//           <br />
-//           produce for our
-//           <br />
-//           clients
-//         </Typography>
-//         <Typography
-//           sx={{
-//             color: 'white',
-//             mb: 3,
-//             fontSize: isMobile ? '14px' : '16px',
-//           }}
-//         >
-//           Lorem Ipsum is simply dummy text of the printing and <br />
-//           typesetting industry. Lorem Ipsum has been the industry's <br />
-//           standard
-//         </Typography>
-//         <Button
-//           variant="contained"
-//           sx={{
-//             backgroundColor: 'orange',
-//             padding: isMobile ? '10px 20px' : '12px 26px',
-//             borderRadius: '25px',
-//             fontSize: isMobile ? '12px' : '14px',
-//             fontWeight: 600,
-//             textTransform: 'none',
-//           }}
-//         >
-//           Get more details
-//         </Button>
-//       </Box>
-
-//       {/* Visuals Section (Controller + Logos) */}
-//       <Box
-//         sx={{
-//           position: isMobile ? 'static' : 'absolute',
-//           top: isMobile ? 'auto' : '20px',
-//           right: isMobile ? 'auto' : '14.5%',
-//           display: 'flex',
-//           flexDirection: 'column',
-//           alignItems: 'center',
-//           mt: isMobile ? 4 : 0,
-//         }}
-//       >
-//         {/* Controller Image */}
-//         <Box
-//           component="img"
-//           src={controllerImg}
-//           alt="controller"
-//           sx={{
-//             width: isMobile ? '180px' : '350px',
-//             mb: 2,
-//             pointerEvents: 'none',
-//           }}
-//         />
-
-//         {/* Logos */}
-//         <Box
-//           sx={{
-//             position: 'relative',
-//             width: isMobile ? '180px' : '350px',
-//             height: isMobile ? '100px' : '200px',
-//           }}
-//         >
-//           <Box
-//             component="img"
-//             src={unityLogo}
-//             alt="Unity"
-//             sx={{
-//               position: 'absolute',
-//               top: isMobile ? '60%' : '60px',
-//               left: isMobile ? '40%' : '30%',
-//               width: isMobile ? '40px' : '60px',
-//             }}
-//           />
-//           <Box
-//             component="img"
-//             src={cryengineLogo}
-//             alt="CryEngine"
-//             sx={{
-//               position: 'absolute',
-//               top: isMobile ? '10%' : '0px',
-//               left: isMobile ? '10%' : '5%',
-//               width: isMobile ? '50px' : '70px',
-//             }}
-//           />
-//           <Box
-//             component="img"
-//             src={unrealLogo}
-//             alt="Unreal Engine"
-//             sx={{
-//               position: 'absolute',
-//               top: isMobile ? '30%' : '40px',
-//               right: isMobile ? '5%' : '5%',
-//               width: isMobile ? '40px' : '60px',
-//             }}
-//           />
-//         </Box>
-//       </Box>
-//     </Box>
-//   );
-// };
+import unityLogo from '../assets/unityImage.png'
+import cryengineLogo from '../assets/cryengine.png'
+import unrealLogo from '../assets/unreal.png'
 
 
 const HeroSection: React.FC = () => {
   const theme = useTheme();
+  const isTabletOrSmaller = useMediaQuery('(max-width:850px)');
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isNarrowDesktop = useMediaQuery('(max-width:1300px)'); 
 
   return (
     <Box
       sx={{
         backgroundColor: 'black',
         fontFamily: 'Poppins',
-        padding: isMobile ? '50px 20px' : '80px 60px',
+        padding: isTabletOrSmaller ? '40px 20px' : '80px 60px',
         display: 'flex',
-        flexDirection: isMobile ? 'column' : 'row',
+        flexDirection: isTabletOrSmaller ? 'column' : 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
         position: 'relative',
+        overflow: 'hidden',
+        minHeight: isTabletOrSmaller ? '600px' : 'auto',
       }}
     >
-      {/* Text Section */}
+      {/* Text */}
       <Box
         sx={{
-          maxWidth: isMobile ? '100%' : '500px',
+          maxWidth: isTabletOrSmaller ? '100%' : '500px',
           textAlign: 'left',
-          marginLeft: isMobile ? '0' : '5%',
+          marginLeft: isTabletOrSmaller ? 0 : '5%',
+          zIndex: 3,
+          position: 'relative',
+          top: isTabletOrSmaller ? '-20px' : '-40px',
         }}
       >
-        <Typography variant="h6" sx={{ color: 'orange', mb: 2, fontWeight: 600 }}>
+        <Typography
+          variant="h6"
+          sx={{
+            color: 'orange',
+            mb: 2,
+            fontWeight: 600,
+            fontSize: isMobile ? '16px' : '18px',
+          }}
+        >
           3D game Dev
         </Typography>
+
         <Typography
           variant="h2"
           sx={{
             color: 'white',
             lineHeight: 1.2,
             fontWeight: 600,
-            fontSize: isMobile ? '32px' : '62px',
+            fontSize: 'clamp(28px, 6vw, 62px)',
             mb: 2,
           }}
         >
@@ -414,17 +66,19 @@ const HeroSection: React.FC = () => {
           <br />
           clients
         </Typography>
+
         <Typography
           sx={{
             color: 'white',
             mb: 3,
-            fontSize: isMobile ? '16px' : '18px',
+            fontSize: 'clamp(14px, 2.5vw, 18px)',
           }}
         >
           Lorem Ipsum is simply dummy text of the printing and <br />
           typesetting industry. Lorem Ipsum has been the industry's <br />
           standard
         </Typography>
+
         <Button
           variant="contained"
           sx={{
@@ -440,32 +94,51 @@ const HeroSection: React.FC = () => {
         </Button>
       </Box>
 
-      
+      {/* Image */}
       <Box
         sx={{
-          position: 'relative',
-          width: isMobile ? '100%' : '40%',
-          mt: isMobile ? 4 : -10,
+          position: isTabletOrSmaller ? 'absolute' : 'relative',
+          width: isTabletOrSmaller ? '100%' : '50%',
+          height: isTabletOrSmaller ? '300px' : 'auto',
+          top: isTabletOrSmaller ? '5%' : '-80px',
+          left: isTabletOrSmaller ? 0 : 'auto',
           display: 'flex',
           justifyContent: 'center',
-          alignItems: 'start',
+          alignItems: 'flex-start',
+          zIndex: isTabletOrSmaller ? 1 : 2,
+          opacity: isTabletOrSmaller ? 0.1 : 1,
+          pointerEvents: 'none',
         }}
       >
-       
-        <Box
-          component="img"
-          src={controllerImg}
-          alt="controller"
-          sx={{
-            width: isMobile ? '180px' : '350px',
-            pointerEvents: 'none',
-            zIndex: 2,
-            marginRight:'50px'
-          }}
-        />
+      
+       <Box
+  component="img"
+  src={controllerImg}
+  alt="controller"
+  sx={{
+    width: isTabletOrSmaller ? '270px' : '420px',
+    objectFit: 'contain',
+    transition: 'transform 0.6s ease, filter 0.6s ease',
+    transform: isNarrowDesktop ? 'translateY(40px) scale(0.95)' : 'translateY(0) scale(1)',
+    filter: isNarrowDesktop ? 'brightness(0.6) blur(1px)' : 'none',
+    zIndex: 1,
+  }}
+/>
 
-       
-        <Box sx={{ position: 'absolute', width: '100%', height: '100%' }}>
+
+
+   
+        <Box
+          sx={{
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            transition: 'opacity 0.6s ease, transform 0.6s ease',
+            opacity: isNarrowDesktop ? 0 : 1,
+            transform: isNarrowDesktop ? 'scale(0.95)' : 'scale(1)',
+            zIndex: 1,
+          }}
+        >
           <Box
             component="img"
             src={cryengineLogo}
@@ -475,7 +148,7 @@ const HeroSection: React.FC = () => {
               top: '25%',
               left: '30%',
               transform: 'translateX(-50%)',
-              width: isMobile ? '50px' : '70px',
+              width: '100px',
             }}
           />
           <Box
@@ -486,9 +159,9 @@ const HeroSection: React.FC = () => {
               position: 'absolute',
               top: '55%',
               left: 0,
-              right:60,
+              right: 60,
               transform: 'translateY(-50%)',
-              width: isMobile ? '40px' : '60px',
+              width: '100px',
             }}
           />
           <Box
@@ -500,7 +173,7 @@ const HeroSection: React.FC = () => {
               top: '30%',
               right: '20%',
               transform: 'translateY(-50%)',
-              width: isMobile ? '40px' : '60px',
+              width: '100px',
             }}
           />
         </Box>
@@ -508,6 +181,8 @@ const HeroSection: React.FC = () => {
     </Box>
   );
 };
+
+
 
 
 

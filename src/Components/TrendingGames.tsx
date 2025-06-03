@@ -1,7 +1,7 @@
 import { Box, Button, Typography, useMediaQuery, useTheme } from '@mui/material';
 import image1 from '../assets/for-honor-video-game-new-5k-ih-2048x2048.png'
-import image2 from '../assets/image2.png'
-import image3 from '../assets/Crysis-2-Shooter-Video-Game-ipad.png'
+import image2 from '../assets/img2.png'
+import image3 from '../assets/cryisis1.png'
 import image4 from '../assets/image4.png'
 import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import spider from '../assets/marvels-spider.png'
@@ -20,7 +20,7 @@ const TrendingGames:React.FC= () => {
     py: 4,
   }}>
       
-      {/* Heading and Button */}
+   
       <Box
         sx={{
           display: 'flex',
@@ -89,6 +89,11 @@ const TrendingGames:React.FC= () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+         transition: 'transform 0.3s',
+              '&:hover': {
+                transform: 'scale(1.03)',
+              },
+        
       }}
     >
       <Box
@@ -122,27 +127,88 @@ const TrendingGames:React.FC= () => {
     </Box>
   ))}
 </Box>
-<Typography variant='h4' sx={{fontFamily:'Poppins',color:'white', display:'flex',justifyContent:'center',mt:'8%', lineHeight: 1.8,textAlign:'center'}}>
-    Lorem Ipsum is simply dummy text of the <br/>printing and typesetting industry.</Typography>
-    <Typography variant='h5' sx={{fontFamily:'Poppins',color:'white',mt:'5%',marginLeft:'10%',fontWeight:'600'}}>Lorem Ipsum</Typography>
-    <p style={{color:'white',marginLeft:'10%'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br/>
-     Lorem Ipsum has been the industry's standard dummy text <br/>ever since the 1500s</p>
 
-<Box sx={{mt:'4%',display:'flex',justifyContent:'center',mb:'35px'}}>
-  <Box
-          component="img"
-          src={spider}
-          alt="controller"
-          sx={{
-            width: isMobile ? '600px' : '1200px',
-            height: isMobile ? '180px' : '450px',
-            pointerEvents: 'none',
-            zIndex: 2,
-            borderRadius:'8px'
-         
-          }}
-        />
+   <Box
+  sx={{
+    maxWidth: '1200px',
+    mx: 'auto',
+    px: { xs: 2, sm: 3, md: 4 },
+    mt: { xs: '12%', md: '8%' },
+  }}
+>
+  
+  <Typography
+    variant="h4"
+    sx={{
+      fontFamily: 'Poppins',
+      color: 'white',
+      fontSize: { xs: '20px', sm: '26px', md: '36px' },
+      lineHeight: { xs: 1.4, sm: 1.6, md: 1.6 },
+      mb: { xs: 2, md: 3 },
+      textAlign: 'center', 
+    }}
+  >
+    Lorem Ipsum is simply dummy text of the <br />
+    printing and typesetting industry.
+  </Typography>
+
+ 
+  <Typography
+    variant="h6"
+    sx={{
+      fontFamily: 'Poppins',
+      color: 'white',
+      fontWeight: 600,
+      fontSize: { xs: '16px', sm: '20px', md: '24px' },
+      mb: { xs: 1, md: 2 },
+      textAlign: { xs: 'center', md: 'left' }, 
+    }}
+  >
+    Lorem Ipsum
+  </Typography>
+
+ 
+  <Typography
+    variant="body2"
+    sx={{
+      fontFamily: 'Poppins',
+      color: 'white',
+      fontSize: { xs: '13px', sm: '15px', md: '17px' },
+      lineHeight: { xs: 1.5, sm: 1.7, md: 1.8 },
+      maxWidth: { xs: '100%', md: '600px' },
+      mx: { xs: 'auto', md: 0 }, 
+      textAlign: { xs: 'center', md: 'left' }, 
+      mb: 4,
+    }}
+  >
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text
+    <br />
+    ever since the 1500s
+  </Typography>
 </Box>
+
+
+
+
+<Box sx={{ display: 'flex', justifyContent: 'center', mb: '35px' }}>
+  <Box
+    component="img"
+    src={spider}
+    alt="controller"
+    sx={{
+      width: '100%',
+      maxWidth: isMobile ? '90%' : '80%', 
+      height: isMobile ? 'auto' : '500px', 
+      objectFit: 'cover', 
+      pointerEvents: 'none',
+      zIndex: 2,
+      borderRadius: '8px'
+    }}
+  />
+</Box>
+
+
     </Box>
   );
 };
