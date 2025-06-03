@@ -5,12 +5,19 @@ import image3 from '../assets/w2.jpg'
 import image4 from '../assets/image4.png'
 import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import spider from '../assets/marvels-spider.png'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 const images =[image1,image2,image3,image4]
 
 const TrendingGames:React.FC= () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const isTablet = useMediaQuery(theme.breakpoints.down('md'));
+useEffect(() => {
+  AOS.init({ duration: 1000, once: true });
+}, []);
 
   return (
     <Box   sx={{
@@ -80,7 +87,7 @@ const TrendingGames:React.FC= () => {
     px: isMobile ? 2 : 0,
   }}
 >
-  {images.map((img, index) => (
+  {/* {images.map((img, index) => (
     <Box
       key={index}
       sx={{
@@ -124,7 +131,55 @@ const TrendingGames:React.FC= () => {
         40 Followers
       </Typography>
     </Box>
-  ))}
+  ))} */}
+  {images.map((img, index) => (
+  <Box
+    key={index}
+    data-aos="zoom-in" 
+    data-aos-delay={index * 100} 
+    sx={{
+      width: isMobile ? '100%' : isTablet ? '45%' : '250px',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      transition: 'transform 0.3s',
+      '&:hover': {
+        transform: 'scale(1.03)',
+      },
+    }}
+  >
+    <Box
+      component="img"
+      src={img}
+      alt={`game-${index}`}
+      sx={{
+        width: '100%',
+        height: isMobile ? 'auto' : '34vh',
+        borderRadius: '30px',
+        objectFit: 'cover',
+      }}
+    />
+    <Typography
+      variant="body2"
+      sx={{
+        color: 'white',
+        fontFamily: 'Poppins',
+        mt: 1.5,
+        fontSize: isMobile ? '14px' : '16px',
+        fontWeight: 600,
+        display: 'flex',
+        alignItems: 'center',
+        gap: '6px',
+      }}
+    >
+      <LocalFireDepartmentIcon
+        sx={{ fontSize: isMobile ? '20px' : '22px', color: 'white' }}
+      />
+      40 Followers
+    </Typography>
+  </Box>
+))}
+
 </Box>
 
    <Box

@@ -1,5 +1,7 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { Box, Typography ,Button,TextField} from '@mui/material'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import project1 from '../assets/project1.png';
 import project2 from '../assets/project2.png';
 import project3 from '../assets/project3.png';
@@ -10,6 +12,10 @@ import project6 from '../assets/project6.png';
 
 const projectImages = [project1, project2, project3, project4, project5, project6];
 const RecentProjects: React.FC = () => {
+    useEffect(() => {
+  AOS.init({ duration: 1000, once: true });
+}, []);
+
 
  return (
     <Box
@@ -57,24 +63,25 @@ const RecentProjects: React.FC = () => {
           mt:'5%'
         }}
       >
-        {projectImages.map((src, index) => (
-          <Box
-            key={index}
-            component="img"
-            src={src}
-            alt={`Project ${index + 1}`}
-            sx={{
-              width: { xs: '100%', sm: '45%', md: '30%' },
-              height: 'auto',
-              borderRadius: 3,
-              objectFit: 'cover',
-              transition: 'transform 0.3s',
-              '&:hover': {
-                transform: 'scale(1.03)',
-              },
-            }}
-          />
-        ))}
+       {projectImages.map((src, index) => (
+  <Box
+    key={index}
+    component="img"
+    src={src}
+    alt={`Project ${index + 1}`}
+    data-aos="zoom-in" 
+    sx={{
+      width: { xs: '100%', sm: '45%', md: '30%' },
+      height: 'auto',
+      borderRadius: 3,
+      objectFit: 'cover',
+      transition: 'transform 0.3s',
+      '&:hover': {
+        transform: 'scale(1.03)',
+      },
+    }}
+  />
+))}
       </Box>
 
       {/* See All Button */}
