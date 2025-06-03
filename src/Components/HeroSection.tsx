@@ -28,7 +28,7 @@ const HeroSection: React.FC = () => {
     minHeight: isTabletOrSmaller ? '600px' : 'auto',
   }}
 >
-  {/* Text Section */}
+  {/* Text */}
   <Box
     sx={{
       maxWidth: isTabletOrSmaller ? '100%' : '500px',
@@ -182,7 +182,7 @@ const HeroSection: React.FC = () => {
     </Box>
   </Box>
 
-  {/* Button for narrow desktop only (moved below image) */}
+  
   {isNarrowDesktop && (
     <Box
       sx={{

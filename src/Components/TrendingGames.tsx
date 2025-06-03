@@ -20,7 +20,6 @@ const TrendingGames:React.FC= () => {
     py: 4,
   }}>
       
-   
       <Box
         sx={{
           display: 'flex',
@@ -191,9 +190,6 @@ const TrendingGames:React.FC= () => {
     ever since the 1500s
   </Typography>
 </Box>
-
-
-
 
 <Box sx={{ display: 'flex', justifyContent: 'center', mb: '35px' }}>
   <Box
