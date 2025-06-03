@@ -1,7 +1,7 @@
 import { Box, Button, Typography, useMediaQuery, useTheme } from '@mui/material';
 import image1 from '../assets/for-honor-video-game-new-5k-ih-2048x2048.png'
-import image2 from '../assets/image2.png'
-import image3 from '../assets/Crysis-2-Shooter-Video-Game-ipad.png'
+import image2 from '../assets/W1.jpg'
+import image3 from '../assets/w2.jpg'
 import image4 from '../assets/image4.png'
 import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import spider from '../assets/marvels-spider.png'
