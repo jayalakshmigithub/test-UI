@@ -1,25 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Box } from '@mui/material';
+import Navbar from './Components/Navbar';
+import './App.css'
+import HeroSection from './Components/HeroSection';
+import controllerImg from '../src/assets/joy_stick 1.png'
+import unityLogo from '../src/assets/unity-game-logo.png'
+import cryengineLogo from '../src/assets/cryengine-logo.png'
+import unrealLogo from '../src/assets/unreal-logo1.png'
+import TrendingGames from './Components/TrendingGames';
+import GameCategories from './Components/GameCategories';
+import RecentProjects from './Components/RecentProjects';
+import Footer from './Components/Footer';
+import HomePage from './Pages/HomePage';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+ return (
+    <Box sx={{ position: 'relative', backgroundColor: 'black', overflow: 'hidden' }}>
+      {/* <Navbar />
+      <HeroSection />
+
+      <TrendingGames/>
+      <GameCategories/>
+      <RecentProjects/>
+      <Footer/> */}
+      <HomePage/>
+
+
+    
+     
+    </Box>
   );
 }
 
