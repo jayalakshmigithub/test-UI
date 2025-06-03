@@ -39,30 +39,40 @@ const GameCategories:React.FC = () => {
     textAlign: 'center',
   }}
 >
-  {/* Heading */}
-  <Typography
-    variant={isMobile ? 'h5' : 'h4'}
-    sx={{ color: 'white', fontFamily: 'Poppins', mb: 2 }}
-  >
-    Lorem Ipsum is simply dummy text of the <br />
-    printing and typesetting industry.
-  </Typography>
+ 
 
-  {/* Subheading */}
-  <Typography
-    variant="body1"
-    sx={{
-      color: 'white',
-      maxWidth: 700,
-      mx: 'auto',
-      mb: 6,
-      fontFamily: 'Poppins',
-      fontSize: isMobile ? '14px' : '16px',
-    }}
-  >
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-  </Typography>
+
+  {/* Heading */}
+<Typography
+  sx={{
+    color: 'white',
+    fontFamily: 'Poppins',
+    fontWeight: 600,
+    mb: 2,
+    fontSize: { xs: '20px', sm: '28px', md: '36px' },
+    lineHeight: { xs: '28px', sm: '36px', md: '44px' },
+    px: { xs: 1, sm: 3 },
+  }}
+>
+  Lorem Ipsum is simply dummy text of the printing  <br /> and typesetting industry.
+</Typography>
+
+{/* Subheading */}
+<Typography
+  sx={{
+    color: 'white',
+    fontFamily: 'Poppins',
+    maxWidth: 700,
+    mx: 'auto',
+    mb: 6,
+    fontSize: { xs: '14px', sm: '16px', md: '18px' },
+    lineHeight: { xs: '20px', sm: '24px', md: '28px' },
+    px: { xs: 1, sm: 2 },
+  }}
+>
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+</Typography>
+
 
 
   <Box

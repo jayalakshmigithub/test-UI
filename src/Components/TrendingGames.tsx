@@ -1,7 +1,7 @@
 import { Box, Button, Typography, useMediaQuery, useTheme } from '@mui/material';
 import image1 from '../assets/for-honor-video-game-new-5k-ih-2048x2048.png'
-import image2 from '../assets/img2.png'
-import image3 from '../assets/cryisis1.png'
+import image2 from '../assets/image2.png'
+import image3 from '../assets/Crysis-2-Shooter-Video-Game-ipad.png'
 import image4 from '../assets/image4.png'
 import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import spider from '../assets/marvels-spider.png'
@@ -121,7 +121,7 @@ const TrendingGames:React.FC= () => {
           gap: '6px',
         }}
       >
-        <LocalFireDepartmentIcon sx={{ fontSize: isMobile ? '18px' : '20px', color: 'white' }} />
+        <LocalFireDepartmentIcon sx={{ fontSize: isMobile ? '20px' : '22px', color: 'white' }} />
         40 Followers
       </Typography>
     </Box>
@@ -137,20 +137,24 @@ const TrendingGames:React.FC= () => {
   }}
 >
   
-  <Typography
-    variant="h4"
-    sx={{
-      fontFamily: 'Poppins',
-      color: 'white',
-      fontSize: { xs: '20px', sm: '26px', md: '36px' },
-      lineHeight: { xs: 1.4, sm: 1.6, md: 1.6 },
-      mb: { xs: 2, md: 3 },
-      textAlign: 'center', 
-    }}
-  >
-    Lorem Ipsum is simply dummy text of the <br />
-    printing and typesetting industry.
-  </Typography>
+ <Typography
+  variant="h4"
+  sx={{
+    fontFamily: 'Poppins',
+    color: 'white',
+    fontSize: { xs: '18px', sm: '24px', md: '32px', lg: '36px' },
+    lineHeight: { xs: 1.3, sm: 1.5, md: 1.6 },
+    mb: { xs: 2, sm: 2.5, md: 3 },
+    textAlign: 'center',
+    px: { xs: 2, sm: 4 },
+  }}
+>
+  Lorem Ipsum is simply dummy text of the
+  <Box component="br" sx={{ display: { xs: 'none', sm: 'inline' } }} />
+  printing and typesetting industry.
+</Typography>
+
+
 
  
   <Typography
