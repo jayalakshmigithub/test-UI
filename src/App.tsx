@@ -1,6 +1,6 @@
-import React from 'react';
+// import React from 'react';
 import { Box } from '@mui/material';
-import Navbar from './Components/Navbar';
+// import Navbar from './Components/Navbar';
 import './App.css'
 // import HeroSection from './Components/HeroSection';
 // import controllerImg from '../src/assets/joy_stick 1.png'

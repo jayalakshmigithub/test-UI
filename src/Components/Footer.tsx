@@ -3,14 +3,14 @@ import {
   Box,
   Typography,
   useTheme,
-  useMediaQuery,
+//   useMediaQuery,
   Stack,
   Divider,
 } from '@mui/material';
 import { Facebook, Instagram, Twitter, LinkedIn } from '@mui/icons-material';
 
 const Footer: React.FC = () => {
-  const theme = useTheme();
+//   const theme = useTheme();
 //   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
